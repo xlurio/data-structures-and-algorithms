@@ -1,0 +1,5 @@
+# IDE/Text Editor
+.vscode/
+
+# Compiled
+build/
