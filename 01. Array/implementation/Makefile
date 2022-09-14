@@ -1,2 +1,2 @@
 compile: array.c
-	gcc -o array array.c array.h
+	gcc -o ./build/array array.c array.h
