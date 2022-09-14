@@ -1,2 +1,3 @@
 compile: stack.c
-	gcc -o ./build/stack stack.c
+	mkdir build && \
+	gcc -g -o ./build/stack stack.c
