@@ -51,6 +51,15 @@ int main(void)
 
     printf("\nItem deleted!\n");
 
+    printf("\n************************\n");
+
+    printf("\nSearching 8 inside the linked list...\n");
+
+    if (is_element_in_linked_list(8, &linked_list))
+    {
+        printf("\nItem found!\n");
+    }
+
     free(linked_list);
     return 0;
 }

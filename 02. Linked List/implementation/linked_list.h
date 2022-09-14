@@ -103,3 +103,25 @@ void delete_from_linked_list_at(struct Node **beginning, int index_to_delete)
 
     current_node->next = NULL;
 }
+
+int is_element_in_linked_list(int item_to_search, struct Node **beginning_node)
+{
+    if ((*beginning_node)->item == item_to_search)
+    {
+        return 1;
+    }
+
+    struct Node *current_node = *beginning_node;
+
+    while (current_node->next != NULL)
+    {
+        if (current_node->item == item_to_search)
+        {
+            return 1;
+        }
+
+        current_node = current_node->next;
+    }
+
+    return 0;
+}
