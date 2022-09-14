@@ -1,17 +1,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct BinaryTree
+struct TreeNode
 {
-    struct BinaryTree *left_child;
-    struct BinaryTree *right_child;
+    struct TreeNode *left_child;
+    struct TreeNode *right_child;
     int value;
 };
 
-struct BinaryTree *create_node(int node_value)
+struct TreeNode *create_node(int node_value)
 {
-    struct BinaryTree *new_node =
-        (struct BinaryTree *)malloc(sizeof(struct BinaryTree));
+    struct TreeNode *new_node =
+        (struct TreeNode *)malloc(sizeof(struct TreeNode));
 
     new_node->value = node_value;
     new_node->left_child = NULL;
