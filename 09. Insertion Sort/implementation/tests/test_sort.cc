@@ -3,7 +3,7 @@
 
 extern "C"
 {
-#include "../src/bubble_sort.h"
+#include "../src/insertion_sort.h"
 }
 
 TEST(SortTests, test_sorting)

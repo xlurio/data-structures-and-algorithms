@@ -1,4 +1,4 @@
-#include "merge_sort.h"
+#include "insertion_sort.h"
 #include <stdlib.h>
 
 int main()

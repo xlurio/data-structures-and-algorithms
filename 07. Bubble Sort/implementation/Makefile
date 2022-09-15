@@ -1,8 +1,8 @@
-compile: ./src/merge_sort.c
-	gcc -g -o ./build/merge_sort ./src/merge_sort.c
+compile: ./src/bubble_sort.c
+	gcc -g -o ./build/bubble_sort ./src/bubble_sort.c
 
 debug: compile
-	gdb ./build/merge_sort
+	gdb ./build/bubble_sort
 
 test:
 	cmake -S . -B build && \
