@@ -1,4 +1,4 @@
-#include "quick_sort.h"
+#include "merge_sort.h"
 #include <stdlib.h>
 
 int main()
