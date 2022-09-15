@@ -4,17 +4,17 @@
 int round_number(float number);
 void merge_sort(int **array_to_sort, int first_index, int mid_index, int last_index);
 
-void sort(int **array_to_sort, int first_index, int last_index)
+void sort(int **array_to_sort, int first_index, int array_length)
 {
-    if ((last_index - first_index) > 1)
+    if ((array_length - first_index) > 1)
     {
-        float mid = ((float)last_index / 2) + first_index;
+        float mid = ((float)array_length / 2) + first_index;
         int mid_index = round_number(mid);
 
         sort(array_to_sort, first_index, mid_index);
-        sort(array_to_sort, mid_index + 1, last_index);
+        sort(array_to_sort, mid_index, array_length);
 
-        merge_sort(array_to_sort, first_index, mid_index, last_index);
+        merge_sort(array_to_sort, first_index, mid_index, array_length);
     }
 }
 
@@ -42,7 +42,7 @@ void merge_sort(int **array_to_sort, int first_index, int mid_index, int last_in
 
     int left_item, right_item;
 
-    while (left_index <= mid_index && right_index <= last_index)
+    while (left_index < mid_index && right_index < last_index)
     {
         left_item = (*array_to_sort)[left_index];
         right_item = (*array_to_sort)[right_index];
