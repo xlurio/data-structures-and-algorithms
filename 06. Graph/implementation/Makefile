@@ -1,2 +1,2 @@
 compile: graph.c
-	gcc -o ./build/graph graph.c
+	gcc -g graph.c
