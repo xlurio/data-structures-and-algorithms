@@ -1,13 +1,29 @@
-int search_in_array(int value_to_find, int *array_to_search)
+int search_in_array(int value_to_find,
+                    int *array_to_search,
+                    int first_index,
+                    int last_index)
 {
-    int last_index = sizeof(array_to_search) / sizeof(short);
-
-    for (int i = 0; i <= last_index; i++)
+    if (last_index >= first_index)
     {
-        if (array_to_search[i] == value_to_find)
+        int half_size = (last_index - first_index) / 2;
+        int mid_index = half_size + first_index;
+
+        if (value_to_find == array_to_search[mid_index])
         {
-            return i;
+            return mid_index;
         }
+        else if (value_to_find < array_to_search[mid_index])
+        {
+            return search_in_array(value_to_find,
+                                   array_to_search,
+                                   first_index,
+                                   mid_index - 1);
+        }
+
+        return search_in_array(value_to_find,
+                               array_to_search,
+                               mid_index + 1,
+                               last_index);
     }
 
     return -1;
